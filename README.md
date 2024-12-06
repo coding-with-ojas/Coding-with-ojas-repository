@@ -4,3 +4,4 @@
 
 I have changed my firefox main theme to neptune firefox theme and so the link to it is here: https://github.com/yiiyahui/Neptune-Firefox
 I am not giving my chrome folder because it gets outdated after firefox updates. So the theme breaks.
+Btw if @yiiyahui is seeing this, I respect him for making this theme and it is very good. Thank you for making this theme.
