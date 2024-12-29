@@ -2,11 +2,11 @@
 import ctypes
 import os
 import random
-import pyautogui
+# import pyautogui
 from PIL import Image, ImageDraw, ImageFilter
 
 # variables
-screen_width, screen_height = pyautogui.size()
+screen_width, screen_height = 1920, 1080 # pyautogui.size()
 background = Image.new('RGB', (screen_width, screen_height))
 tile_width, tile_height = screen_width / 5, screen_height / 5
 draw: ImageDraw = ImageDraw.Draw(background)
@@ -16,17 +16,17 @@ BLACK = (0, 0, 0)
 
 WHITE = (255, 255, 255)
 
-rgb_1 = (random.randint(255, 256), random.randint(0, 256), random.randint(0, 1))
+rgb_1 = (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256))
 
-rgb_2 = (random.randint(0, 256), random.randint(255, 256), random.randint(0, 1))
+rgb_2 = (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256))
 
-rgb_3 = (random.randint(0, 1), random.randint(255, 256), random.randint(0, 256))
+rgb_3 = (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256))
 
-rgb_4 = (random.randint(0, 1), random.randint(0, 256), random.randint(255, 256))
+rgb_4 = (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256))
 
-rgb_5 = (random.randint(0, 256), random.randint(0, 1), random.randint(255, 256))
+rgb_5 = (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256))
 
-rgb_6 = (random.randint(255, 256), random.randint(0, 1), random.randint(0, 256))
+rgb_6 = (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256))
 
 colour_choice = [BLACK, WHITE, rgb_1, rgb_2, rgb_3, rgb_4, rgb_5, rgb_6]
 
@@ -42,5 +42,5 @@ background_blured = background.filter(ImageFilter.GaussianBlur(radius=200))
 background_blured.save('wallpaper_gradient.jpeg')
 
 # Step 3: Apply as wallpaper
-SPI_SETDESKWALLPAPER = 20
-ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, os.path.abspath("wallpaper_gradient.jpeg"), 0)
+# SPI_SETDESKWALLPAPER = 20
+# ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, os.path.# # abspath("wallpaper_gradient.jpeg"), 0)
