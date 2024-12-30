@@ -19,6 +19,7 @@ public class Main {
                               );
         //Output
         System.out.println("The hypotenuse of the triangle is " + hypotenuse);
+        scanner.close();
 
     }
 }
